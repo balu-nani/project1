@@ -19,6 +19,6 @@ RUN mv apache-tomcat-9.0.65 tomcat
 RUN rm -rf apache-tomcat-9.0.65.tar.gz
 
 WORKDIR /opt/tomcat/webapps
-COPY /target/petclinic.war /opt/tomcat/webapps
+COPY ./target/petclinic.war /opt/tomcat/webapps
 
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
